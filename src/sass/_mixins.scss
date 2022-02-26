@@ -1,0 +1,35 @@
+@mixin grid-xs {
+  @media screen and (max-width: $xs) {
+    @content;
+  }
+}
+
+@mixin grid-sm {
+  @media screen and (min-width: $sm) {
+    @content;
+  }
+}
+
+@mixin grid-md {
+  @media screen and (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin grid-lg {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin grid-xl {
+  @media screen and (min-width: $xl) {
+    @content;
+  }
+}
+
+@mixin grid-xll {
+  @media screen and (min-width: $xll) {
+    @content;
+  }
+}

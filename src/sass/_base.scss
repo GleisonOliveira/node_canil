@@ -1,1 +1,23 @@
 $background_color: yellow;
+$gray_color: #ced4da;
+$primary_color: #3498DB;
+$light_gray: #f9f9f9;
+
+$xs: 575px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xll: 1400px;
+
+::placeholder {
+    color: $gray_color;
+}
+  
+:-ms-input-placeholder {
+    color: $gray_color;
+}
+  
+::-ms-input-placeholder {
+    color: $gray_color;
+}
