@@ -1,10 +1,13 @@
 #header {
   #title {
-    color: $primary_color;
     font-size: 2rem;
-    & > i {
-      display: inline-block;
-      margin-right: 1rem;
+    & > a{
+      text-decoration: none;
+      color: $primary_color;
+      & > i {
+        display: inline-block;
+        margin-right: 1rem;
+      }
     }
   }
   #mobile-menu {
@@ -36,6 +39,7 @@
     }
     & > i {
       position: absolute;
+      user-select: none;
       right: 0rem;
       top: 0;
       bottom: 0;
