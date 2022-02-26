@@ -4,7 +4,7 @@ import { getInitialParams } from '../utils/initialParams';
 
 const show = (req: Request, res: Response, menus: IMenu[]) => {
   res.render('pages/search', {
-    ...getInitialParams(menus),
+    ...getInitialParams(menus, req),
   });
 };
 

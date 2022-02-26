@@ -7,25 +7,21 @@ interface IInitialParams {
   menus: IMenu[];
 }
 
-const returnActive = (menus: IMenu[], req: Request | null): IMenu[] => {
-  if (req) {
-    return menus.map(menu => {
-      if (req.path === menu.href) {
-        menu.isActive = true;
-        return menu;
-      }
-
-      menu.isActive = false;
+const returnActive = (menus: IMenu[], req: Request): IMenu[] => {
+  return menus.map(menu => {
+    if (req.path === menu.href) {
+      menu.isActive = true;
       return menu;
-    });
-  }
+    }
 
-  return menus;
+    menu.isActive = false;
+    return menu;
+  });
 };
 
 export const getInitialParams = (
   menus: IMenu[],
-  req: Request | null = null
+  req: Request
 ): IInitialParams => ({
   title: process.env.TITLE || '',
   subtitle: process.env.SUBTITLE || '',
