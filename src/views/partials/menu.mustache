@@ -1,36 +1,38 @@
-<nav id="header">
-    <div class="container py-4 px-3">
-        <div class="row justify-content-between">
-            <div class="col-10 col-sm-6 col-md-6 py-1" id="title">
-                <a href="/" title="{{ title }}"><i class="fas fa-cat"></i>{{ title }}</a>
-            </div>
-            <div class="col-2" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="col-sm-5 row m-0 py-1 px-0 align-items-center justify-content-end">
-                <form method="GET" action="/search" id="search" class="p-0 m-0">
-                    <input class="form-control" type="text" placeholder="Pesquise por raça" name="search"/>
-                    <i class="fas fa-search"></i>
-                </form>
-            </div>
-        </div>
-    </div>
-</nav>
-<nav id="menu">
-    <div class="container">
-        <ul>
-            {{#menus}}
-                <li {{#isActive}} class="active" {{/isActive}}>
-                    <a 
-                        href={{ href }} 
-                        title={{ title }} 
-                        {{#target}} target={{ . }} {{/target}}
-                    >
-                        <i class="{{ icon }}"></i>
-                        {{ text }}
-                    </a>
-                </li>
-            {{/menus}}
-        </ul>
-    </div>
-</nav>
+<section id="header">
+	<nav>
+			<div class="container py-2 py-sm-4 px-3">
+					<div class="row justify-content-between">
+							<div class="col-10 col-sm-6 col-md-6 py-1" id="title">
+									<a href="/" title="{{ title }}"><i class="fas fa-cat"></i>{{ title }}</a>
+							</div>
+							<div class="col-2" id="mobile-menu">
+									<i class="fas fa-bars"></i>
+							</div>
+							<div class="col-sm-5 row m-0 py-1 px-3 px-sm-0 align-items-center justify-content-end">
+									<form method="GET" action="/search" id="search" class="p-0 m-0">
+											<input class="form-control" type="text" placeholder="Pesquise por raça" name="search"/>
+											<i class="fas fa-search"></i>
+									</form>
+							</div>
+					</div>
+			</div>
+	</nav>
+	<nav id="menu">
+			<div class="container">
+					<ul>
+							{{#menus}}
+									<li {{#isActive}} class="active" {{/isActive}}>
+											<a 
+													href={{ href }} 
+													title={{ title }} 
+													{{#target}} target={{ . }} {{/target}}
+											>
+													<i class="{{ icon }}"></i>
+													{{ text }}
+											</a>
+									</li>
+							{{/menus}}
+					</ul>
+			</div>
+	</nav>
+</section>

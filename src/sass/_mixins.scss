@@ -33,3 +33,21 @@
     @content;
   }
 }
+
+@mixin fadeInAnimation($duration: 500ms, $fillMode: forwards, $delay: 0) {
+	opacity: 0;
+	animation-name: fadein;
+	animation-duration: $duration;
+	animation-fill-mode: $fillMode;
+	animation-delay: $delay;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1;
+	}
+}
+

@@ -8,8 +8,9 @@ const showHome = (req: Request, res: Response, menus: IMenu[]) => {
 		...getInitialParams(menus, req),
 		banner: {
 			title: 'Todos os animais',
-			src: 'ddd',
+			src: 'images/allanimals.jpg',
 			text: 'Todos os animais',
+			subtext: 'Alegria para toda sua casa e família',
 		} as IBanner,
 	});
 };

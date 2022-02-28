@@ -1,8 +1,19 @@
 {{#banner}}
-<section id="banner">
-    <img src="{{ src }}" alt="{{ title }}" />
+<section id="banner" style="background-image: url({{ src }})">
     {{#text}}
-        <p>{{ text }}</p>
-    {{/text}}
+			<div>
+				{{ text }}
+					{{#subtext}}
+						<div>
+							{{ subtext }}
+						</div>
+					{{/subtext}}
+					<div>
+						<i class="fas fa-dog"></i>
+						<i class="fas fa-cat"></i>
+						<i class="fas fa-fish"></i>
+					</div>
+			</div>
+		{{/text}}
 </section>
 {{/banner}}
