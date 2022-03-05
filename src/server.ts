@@ -10,22 +10,22 @@ const sassPathDest = path.join(__dirname, '../dist/css/main.css');
 const sassPath = path.join(__dirname, 'sass/main.scss');
 
 sass.render(
-  {
-    file: sassPath,
-    outputStyle: 'compressed',
-  },
-  function (error, result) {
-    if (!error) {
-      fs.writeFile(sassPathDest, result.css, function (err) {
-        if (err) {
-          console.log(err);
-        }
-      });
-      return;
-    }
+	{
+		file: sassPath,
+		outputStyle: 'compressed',
+	},
+	function (error, result) {
+		if (!error) {
+			fs.writeFile(sassPathDest, result.css, function (err) {
+				if (err) {
+					console.log(err);
+				}
+			});
+			return;
+		}
 
-    console.log(error);
-  }
+		console.log(error);
+	}
 );
 
 dotenv.config();
@@ -41,7 +41,7 @@ server.use(express.static(path.join(__dirname, '../public')));
 server.use(express.static(path.join(__dirname, '../dist')));
 server.use(routes);
 server.use((req: Request, res: Response) => {
-  res.status(404).send('Não encontrado');
+	res.status(404).send('Não encontrado');
 });
 
 server.listen(process.env.PORT || 3000);

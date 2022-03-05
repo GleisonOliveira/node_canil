@@ -2,10 +2,15 @@
 @import 'mixins';
 @import 'menu';
 @import 'banner';
+@import 'search';
 
 body {
 	font-family: 'Baloo 2', cursive;
 	min-width: $min_width;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: $primary_color;
 }
 
 ::-webkit-scrollbar {

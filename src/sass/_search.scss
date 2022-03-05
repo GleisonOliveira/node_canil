@@ -1,0 +1,10 @@
+#search{
+	padding-top: 160px;
+}
+
+@include grid-xs {
+	#search{
+		padding-top: 0px;
+	}
+	
+}

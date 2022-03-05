@@ -4,7 +4,7 @@
 	width: 100%;
 	z-index: 99;
 	top: 0;
-	&:first-child{
+	&:first-child {
 		background-color: white;
 	}
 	& > nav {
@@ -59,6 +59,7 @@
 				align-items: center;
 				color: $primary_color;
 				transition: color 350ms, background-color 350ms;
+				cursor: pointer;
 			}
 		}
 	}
@@ -66,6 +67,7 @@
 
 #menu {
 	background-color: $light_gray;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 	display: none;
 	& ul {
 		margin: 0;
@@ -109,7 +111,7 @@
 			#mobile-menu {
 				display: none;
 			}
-			& #search{
+			& #search {
 				max-width: 300px;
 			}
 		}
@@ -121,8 +123,10 @@
 
 @include grid-xs {
 	#header {
+		background-color: $light_gray !important;
+		box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 		& > nav {
-			& #search{
+			& #search {
 				max-width: 100%;
 			}
 		}

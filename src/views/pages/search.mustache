@@ -1,0 +1,19 @@
+{{>partials/header}}
+{{>partials/menu}}
+<section id="search">
+	{{#pets}}
+		<h1 class="text-center pt-5 pb-2 px-4">Todos os {{#animal}} {{ . }} {{/animal}} {{^animal}}animais{{/animal}} para doação.</h1>
+		<p class="subtitle text-center">Você pesquisou por <b>"{{ query }}"</b> e está vendo um total de <b>"{{ total }}"</b> animais.</p>
+	{{/pets}}
+	{{^pets}}
+		<h1 class="text-center pt-5 pb-2 px-4">Não foi encontrado nenhum animal para a sua pesquisa.</h1>
+		<p class="subtitle text-center">Tente pesquisar por um termo diferente de "<b>{{ query }}</b>".</p>
+	{{/pets}}
+	<div class="container">
+		<div class="row">
+			{{>partials/list}}
+		</div>
+	</div>
+</section>
+<button class="btn btn-primary mb-3"> dsfds</button>
+{{>partials/footer}}
