@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run assets && nodemon -e ts,json,mustache,scss src/server.ts",
+    "dev": "npm run assets && npm run build && nodemon -e ts,json,mustache,scss -w ./src -x \"npm run watch:serve\"",
+    "watch:serve": "npm run build && ts-node src/server.ts",
     "sass": "node-sass src/sass/main.scss dist/css/main.css -w",
-    "assets": "node-sass src/sass/main.scss dist/css/main.css && gulp copy"
+    "assets": "node-sass src/sass/main.scss dist/css/main.css && gulp copy",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
