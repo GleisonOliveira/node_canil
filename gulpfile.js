@@ -1,6 +1,5 @@
 const { src, dest, task } = require('gulp');
 var uglify = require('gulp-uglify');
-var pipeline = require('readable-stream').pipeline;
 
 async function copy() {
 	src('node_modules/bootstrap/dist/*/*').pipe(dest('dist/'));
