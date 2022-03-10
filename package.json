@@ -9,7 +9,8 @@
     "sass": "node-sass src/sass/main.scss dist/css/main.css -w",
     "assets": "node-sass src/sass/main.scss dist/css/main.css && gulp copy",
     "build": "tsc && gulp uglify",
-    "uglify": "gulp uglify"
+    "uglify": "gulp uglify",
+		"start": "ts-node src/server.ts"
   },
   "author": "",
   "license": "ISC",
