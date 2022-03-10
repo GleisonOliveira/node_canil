@@ -2,7 +2,7 @@
 
 [![Deploy](https://github.com/GleisonOliveira/node_canil/actions/workflows/deployToHeroku.yml/badge.svg?branch=master)](https://github.com/GleisonOliveira/node_canil/actions/workflows/deployToHeroku.yml)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/GleisonOliveira/node_canil.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/GleisonOliveira/node_canil/alerts/)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/GleisonOliveira/node_canil.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/GleisonOliveira/node_canil/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/GleisonOliveira/node_canil.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/GleisonOliveira/node_canil/context:javascript)
 
 Run the follow command to install all required libs.
 ```bash
