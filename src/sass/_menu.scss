@@ -4,6 +4,7 @@
 	width: 100%;
 	z-index: 99;
 	top: 0;
+	user-select: none;
 	&:first-child {
 		background-color: white;
 	}
@@ -69,6 +70,7 @@
 	background-color: $light_gray;
 	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 	display: none;
+	user-select: none;
 	& ul {
 		margin: 0;
 		padding: 0;
@@ -76,6 +78,9 @@
 		& > li {
 			display: inline-block;
 			position: relative;
+			& > .indicator {
+				display: none;
+			}
 			&:hover,
 			&.active {
 				&:after {

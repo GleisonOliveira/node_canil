@@ -1,6 +1,7 @@
 @import 'base';
 @import 'mixins';
 @import 'menu';
+@import 'menuMobile';
 @import 'banner';
 @import 'search';
 
@@ -15,6 +16,7 @@ h1, h2, h3, h4, h5, h6{
 
 ::-webkit-scrollbar {
 	width: 10px;
+	height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -24,9 +26,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: $primary_color;
+	background-color: darken($primary_color, 10%);
 	border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background-color: darken($primary_color, 10%);
+	background-color: darken($primary_color, 30%);
 }

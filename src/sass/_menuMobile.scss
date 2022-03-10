@@ -1,0 +1,79 @@
+#menu-mobile {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: none;
+	&.active {
+		display: flex;
+		@include fadeInAnimation();
+	}
+	& > div {
+		& > a {
+			color: white;
+			font-size: 1.5rem;
+			display: block;
+			text-align: center;
+			margin: 1rem 0;
+			text-decoration: none;
+			& > i {
+				margin-right: 0.5rem;
+			}
+		}
+		background-color: $primary_color;
+		color: white;
+		min-width: 50%;
+		max-width: 250px;
+		& > ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			& > li {
+				border-left: solid 3px $primary_color;
+				margin-bottom: 0.3rem;
+				position: relative;
+				transition: background-color 350ms;
+				& > .indicator {
+					position: absolute;
+					left: -5px;
+					top: 0;
+					bottom: 0;
+					color: white;
+					display: none;
+					font-size: 1.3rem;
+					align-items: center;
+					text-align: left;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					width: 90%;
+					height: 1px;
+					bottom: -0.2rem;
+					background-color: lighten($primary_color, 10%);
+					left: 0;
+					right: 0;
+					margin: auto;
+				}
+				& > a {
+					color: white;
+					display: block;
+					text-decoration: none;
+					padding: 0.5rem 1.5rem;
+				}
+				&.active,
+				&:hover {
+					border-left: solid 3px white;
+					background-color: darken($primary_color, 10%);
+					& > .indicator {
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+}

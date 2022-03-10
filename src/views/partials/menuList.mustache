@@ -1,0 +1,15 @@
+<ul>
+		{{#menus}}
+				<li {{#isActive}} class="active" {{/isActive}}>
+						<i class="fas fa-caret-right indicator"></i>
+						<a 
+								href={{ href }} 
+								title={{ title }} 
+								{{#target}} target={{ . }} {{/target}}
+						>
+								<i class="{{ icon }}"></i>
+								{{ text }}
+						</a>
+				</li>
+		{{/menus}}
+</ul>
