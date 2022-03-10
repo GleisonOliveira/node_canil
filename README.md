@@ -11,3 +11,10 @@ Run the follow command to run dev environment
 ```bash
 npm run dev
 ```
+
+Run the follow command to run prod environment
+```bash
+npm start
+```
+
+You can view the final result in [https://nodecanil.herokuapp.com/](https://nodecanil.herokuapp.com/)
